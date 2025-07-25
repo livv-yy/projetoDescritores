@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Descritores - Prova Paraná</title>
+  <link rel="stylesheet" href="style.css" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Walter+Turncoat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ 
+  <div class="intro-container">
+    <h1 class="titulo-intro"><span id="digitando"></span></h1>
+    <p class="subintro">A Prova Paraná e o SAEB utilizam descritores em suas provas. Cada descritor é responsável por "guardar" um determinado assunto. Se você quer garantir aquele notão no seu boletim, explore algumas dessas explicações sobre os descritores mais cobrados na prova!</p>
+
+    <div class="links-sites">
+     <a href="https://livv-yy.github.io/descritor31/" target="_blank" onclick="tocarClique()">equação do 2° grau</a>
+      <a href="https://mariacalizotti-0702.github.io/porcenta/" target="_blank" onclick="tocarClique()">porcentagem</a>
+      <a href="https://gaby245.github.io/D-10/" target="_blank" onclick="tocarClique()"> triângulo retângulo</a>
+    </div>
+  </div>
+
+  
+  <section class="sobre">
+    <h2>Sobre o projeto</h2>
+    <p>Nós somos Lívia, Maria e Gaby, alunas do 2° ano do EM, estamos no itinerário de exatas e  desenvolvemos esse projeto na nossa disciplina de programação com orientação do professor Miderson.</p>
+    <p>Uma curiosidade sobre o cólegio Garcez é que ele iniciou seu funcionamento como colégio em 1969, não como conhecemos hoje, mas com os primeiros passos para se tornar o colégio que é atualmente!</p>
+    <a href="https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=449740" > para saber mais do colégio, clique aqui e veja as informações do IBGE </a>
+    <img src="escola.jpeg" alt="Imagem da escola" class="foto-escola">
+  </section>
+
+  
+  <footer class="creditos">
+    <p>  ✪ criado por: Lívia Maier, Gabriela Marini e Maria Calizotti
+    </p>
+    <p class="small">programação — 2025</p>
+  </footer>
+
+  
+   <script>
+    const texto = "Descritores da Prova Paraná";
+    const digitando = document.getElementById("digitando");
+    let index = 0;
+
+
+    function digitar() {
+      if (index < texto.length) {
+        digitando.innerHTML += texto.charAt(index);
+        index++;
+        setTimeout(digitar, 90);
+      }
+    }
+    digitar();
+
+    function tocarClique() {
+      document.getElementById("click-sound").play();
+    }
+  </script>
+
+</body>
+</html>
